@@ -1,17 +1,20 @@
 .header{
     height:55px;
-    background-color: white;
-    border-bottom:1px solid #ccc ; 
+    background-color: rgb(248, 248, 248);
+    padding:0 10px 0 10px;
+    
 
     display:flex;
     flex-direction: row;
     justify-content:space-between;
     position:fixed;
     z-index:100;
+    opacity:0.98;
 
     top:0;
     right:0;
     left:0;
+
 
 }
 .left-section{
@@ -46,7 +49,7 @@
     flex:1;
     padding-left:10px;
     font-size:16px;
-    border:1px solid #f8f8f8;
+    border:1px solid #d3d3d3;
     border-right:none;
     border-radius:20px 0 0 20px;
     outline:none;
@@ -62,15 +65,17 @@
 .search-button{
     height:39px;
     width:60px;
-    border:1px solid #ccc;
+    border:1px solid #d3d3d3;
     border-radius:0 20px 20px 0;
     outline:none;
      margin-left:-1px;
      margin-right:8px;
     position:relative;
 }
-.search-button:hover ,.voice-button:hover{
-    background-color:#d8d7d7;
+.search-button:hover{
+    background-color: #e8e7e7;
+    transition-duration: 0.15s;
+    cursor: pointer;
 }
 
 .search-button,
@@ -110,13 +115,17 @@
     opacity:1;
     transition:opacity 0.15s
 }
-
+.voice-button:hover{
+    background-color:rgb(210, 210, 210);
+    transition-duration: 0.15s;
+    cursor: pointer;
+}
 .voice-button{
      height:40px;
      width:40px;
      border-radius:20px;
      border:none;
-     background-color:rgb(245, 245, 245);
+     background-color:rgb(231, 231, 231);
     position:relative;
     display:flex;
     justify-content:center;
@@ -134,15 +143,30 @@
     align-items:center;
     justify-content: space-between;
     flex-shrink:0;
+    right:0;
 }
-.upload-ico{
-    height:24px;
+
+.notifiaction-button {
+    border: none;
+    border-radius:50%;
+    position:relative;
+    align-items:center;
+    padding:8px 10px;
+    background-color:transparent;
+    margin-left:12px;
+    
 }
-.app-ico{
-    height:24px;
+.notifiaction-button:hover{
+    background-color: rgb(222, 222, 222);
+    transition:2;
+    cursor:pointer;
+}
+.notifiaction-button .div{
+    position:absolute ;
 }
 .noti-ico{
     height:24px;
+    
 }
 .notifaction-number{
     position:relative;
@@ -162,4 +186,30 @@
 .my-picture{
     height:32px;
     border-radius:50%;
+    margin-left:20px;
+}
+/*Create button*/
+.create-button {
+  display: flex;                    /* ➜ Layout in a row */
+  align-items: center;             /* ➜ Vertical center alignment */
+  gap: 8px;                        /* ➜ Spacing between icon and text */
+  padding: 2px 14px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(228, 228, 228);
+  font-size: 14px;
+  cursor: pointer;
+ 
+}
+
+.create-button:hover {
+  background-color:#d8d7d7;
+   transition: background-color 0.15s ease;
+}
+
+.create-button .icon svg {
+    margin-top:5px;
+  width: 24px;
+  height: 24px;
+  fill: #000; /* or your theme color */
 }
